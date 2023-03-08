@@ -1,12 +1,13 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const corsOptions = {
-  origin: 'https://mern-crud-app-altajvirani.netlify.app/',
-  optionsSuccessStatus: 200
-}
+// const corsOptions = {
+//   origin: 'https://mern-crud-app-altajvirani.netlify.app/',
+//   optionsSuccessStatus: 200
+// }
 app.use(express.json())
-app.use(cors(corsOptions))
+// app.use(cors(corsOptions))
+app.use(cors())
 const port = process.env.PORT || 5000
 const connectToDB = require('./routes/connect')
 const insert = require('./routes/insert')
