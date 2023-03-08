@@ -20,7 +20,7 @@ function App() {
                 (!showInsert && <Read onClickEdit={swapComps} />)
             }
             <CustomToast
-                type={'success'}
+                type={'x`'}
                 title={'Hooray!'}
                 message={'Record Inserted Successfully.'}
                 duration={3000}

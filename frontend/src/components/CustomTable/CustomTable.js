@@ -7,7 +7,7 @@ function CustomTable({ headers, editable, onClickEdit }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const result = await axios.get('http://localhost:5000/read')
+                const result = await axios.get(`${process.env.REACT_APP_API}/read`)
                 setData(result)
             } catch (error) {
                 console.log(`Error fetching data: ${error}`)
@@ -16,7 +16,7 @@ function CustomTable({ headers, editable, onClickEdit }) {
         fetchData()
     }, [])
     const handleDelete = async (id) => {
-        await axios.delete(`http://localhost:5000/delete/${id}`)
+        await axios.delete(`${process.env.REACT_APP_API}/delete/${id}`)
             .then(() => {
                 setData(prevData => ({
                     ...prevData,

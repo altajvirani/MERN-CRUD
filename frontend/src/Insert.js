@@ -36,8 +36,8 @@ function Insert({ prevData, onClickSubmit }) {
       if (Object.keys(formData).length !== 0) {
         try {
           const response = Object.keys(prevData).length === 0 ?
-            await axios.post('http://localhost:5000/insert', formData) :
-            await axios.put(`http://localhost:5000/update/${prevData['_id']}`, formData)
+            await axios.post(`${process.env.REACT_APP_API}/insert`, formData) :
+            await axios.put(`${process.env.REACT_APP_API}/update/${prevData['_id']}`, formData)
           console.log(`Record inserted successfully. ${response}`)
           onClickSubmit(null, false)
         } catch (error) {
