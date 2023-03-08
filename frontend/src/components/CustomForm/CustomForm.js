@@ -13,7 +13,7 @@ function CustomForm({ formFields, getFormData, prevData}) {
     }
 
     return (
-        <Form className='form' onSubmit={handleSubmit}>
+        <Form className='custom-form' onSubmit={handleSubmit}>
             <FormGroup className='formGroup'>
                 {Object.entries(formFields).map(([label, attr], index) => {
                     return <CustomField

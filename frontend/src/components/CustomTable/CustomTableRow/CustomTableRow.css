@@ -1,9 +1,9 @@
 tr {
-    border-top: 0.01rem solid rgb(196, 201, 209);
+    border-top: 0.01rem solid #c4c9d1;
 }
 
 tr:hover {
-    background-color: rgb(240, 242, 245);
+    background-color: #f0f2f5;
 }
 
 .edit-delete-column {
@@ -16,5 +16,5 @@ button {
     background-color: white;
     border-radius: 0.3rem;
     padding: 0.2rem 0.5rem 0.2rem 0.5rem;
-    border: 0.02rem solid rgb(180, 185, 191);
+    border: 0.02rem solid #b4b9bf;
 }
